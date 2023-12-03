@@ -1,0 +1,20 @@
+---
+import Social from './Social.astro'
+const socialMedia = [
+	{ platform: 'github', username: 'withastro' },
+	{ platform: 'twitter', username: 'withastro' },
+	{ platform: 'twitch', username: 'withastro' }
+]
+---
+
+<style>
+	footer {
+		font-size: small;
+		display: flex;
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+</style>
+<footer>
+	{socialMedia.map((social) => <Social {...social} />)}
+</footer>
